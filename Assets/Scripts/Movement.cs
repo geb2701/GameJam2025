@@ -7,7 +7,7 @@ public class Movement : MonoBehaviour
     [Header("Movimiento")]
     private float movimientoHorizontal = 0f;
     [SerializeField] private float velocidadDeMovimiento;
-    [Range(0, 0.3f)][SerializeField] private float suavizadoDeMovimiento;
+    [Range(0, 0.7f)][SerializeField] private float suavizadoDeMovimiento;
     private Vector3 velocidad = Vector3.zero;
     private bool mirandoDerecha = true;
 
