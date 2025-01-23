@@ -7,31 +7,82 @@ public class Burble : MonoBehaviour
     public float speed = 1f;
     public int intensityForceLevel = -1;
     [SerializeField] private LayerMask playerLayer;
+    [SerializeField] private Transform _innerShape, _outerShape;
 
     private bool goDown = false;
+    private float initialX = 0;
     private Coroutine activeCoroutine;
 
-    private float horizontalAmplitude = 2f;
-    private float horizontalSpeed = 1f;
+    private float horizontalSpeed = 0;
+    private float horizontalAmplitude = 0;
 
-    private List<HorizontalMovementLevels> horizontalMovementLevels = new List<HorizontalMovementLevels>()
+    private List<HorizontalMovementLevel> horizontalMovementLevels = new()
     {
-        new HorizontalMovementLevels()
+        new ()
         {
-
+            horizontalAmplitudeMin = 0,
+            horizontalAmplitudeMax = 0f,
+            speedMin = 0,
+            speedMax = 0f
+        },
+        new ()
+        {
+            horizontalAmplitudeMin = 0.2f,
+            horizontalAmplitudeMax = 0.6f,
+            speedMin = 0.4f,
+            speedMax = 0.7f
+        },
+        new ()
+        {
+            horizontalAmplitudeMin = 0.4f,
+            horizontalAmplitudeMax = 0.6f,
+            speedMin = 0.6f,
+            speedMax = 0.8f
+        },
+        new ()
+        {
+            horizontalAmplitudeMin = 0.5f,
+            horizontalAmplitudeMax = 0.8f,
+            speedMin = 0.5f,
+            speedMax = 1f
         },
     };
-    private float initialX;
 
     private void Start()
     {
-        if (intensityForceLevel > 0 && )
-        {
-
-        }
         var intensity = Random.Range(0, 10);
-        if ()
-            initialX = transform.position.x;
+        HorizontalMovementLevel horizontalMovement = null;
+        if (intensityForceLevel > 0 && intensityForceLevel <= horizontalMovementLevels.Count)
+        {
+            horizontalMovement = horizontalMovementLevels[intensityForceLevel];
+        }
+
+        if (horizontalMovement == null)
+        {
+            if (intensity > 5)
+            {
+                horizontalMovement = horizontalMovementLevels[0];
+            }
+            else if (intensity > 7)
+            {
+                horizontalMovement = horizontalMovementLevels[1];
+            }
+            else if (intensity > 9)
+            {
+                horizontalMovement = horizontalMovementLevels[2];
+            }
+            else
+            {
+                horizontalMovement = horizontalMovementLevels[3];
+            }
+        }
+        else
+        {
+            horizontalMovement = horizontalMovementLevels[0];
+        }
+        initialX = transform.position.x;
+        horizontalSpeed = Random.Range(horizontalMovement.speedMin, horizontalMovement.speedMax);
+        horizontalAmplitude = Random.Range(horizontalMovement.horizontalAmplitudeMin, horizontalMovement.horizontalAmplitudeMax);
     }
     void Update()
     {
@@ -85,11 +136,11 @@ public class Burble : MonoBehaviour
         activeCoroutine = null;
     }
 
-    private class HorizontalMovementLevels
+    private class HorizontalMovementLevel
     {
         public float horizontalAmplitudeMin { get; set; }
         public float horizontalAmplitudeMax { get; set; }
-        public float horizontalSpeedMin { get; set; }
-        public float horizontalSpeedMax { get; set; }
+        public float speedMin { get; set; }
+        public float speedMax { get; set; }
     }
 }

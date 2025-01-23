@@ -36,18 +36,26 @@ public class Movement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        /*
-        foreach (LayerMask layerMask in quePuedeSaltar)
+        var mover = movimientoHorizontal * Time.fixedDeltaTime;
+
+        Vector3 velocidadObjetivo = new Vector2(mover, rb2D.linearVelocity.y);
+        rb2D.linearVelocity = Vector3.SmoothDamp(rb2D.linearVelocity, velocidadObjetivo, ref velocidad, suavizadoDeMovimiento);
+
+        if (mover > 0 && !mirandoDerecha)
         {
-            if (Physics2D.OverlapBox(controladorSuelo.position, dimensionesCaja, 0f, layerMask))
-            {
-                puedeSaltar = true;
-                break;
-            }
-        }*/
+            Girar();
+        }
+        else if (mover < 0 && mirandoDerecha)
+        {
+            Girar();
+        }
 
-        Mover(movimientoHorizontal * Time.fixedDeltaTime, salto);
-
+        if (puedeSaltar && salto)
+        {
+            Debug.Log("Salto");
+            puedeSaltar = false;
+            rb2D.AddForce(new Vector2(0f, fuerzaDeSalto));
+        }
         salto = false;
     }
 
@@ -61,28 +69,6 @@ public class Movement : MonoBehaviour
                 puedeSaltar = true;
                 break;
             }
-        }
-
-    }
-
-    private void Mover(float mover, bool saltar)
-    {
-        Vector3 velocidadObjetivo = new Vector2(mover, rb2D.linearVelocity.y);
-        rb2D.linearVelocity = Vector3.SmoothDamp(rb2D.linearVelocity, velocidadObjetivo, ref velocidad, suavizadoDeMovimiento);
-
-        if (mover > 0 && !mirandoDerecha)
-        {
-            Girar();
-        }
-        else if (mover < 0 && mirandoDerecha)
-        {
-            Girar();
-        }
-
-        if (puedeSaltar && saltar)
-        {
-            puedeSaltar = false;
-            rb2D.AddForce(new Vector2(0f, fuerzaDeSalto));
         }
     }
 

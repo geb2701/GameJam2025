@@ -169,9 +169,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.2
+  intensityForceLevel: -1
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
+  _innerShape: {fileID: 0}
+  _outerShape: {fileID: 0}
 --- !u!1 &1806330580743581007
 GameObject:
   m_ObjectHideFlags: 0
@@ -184,7 +187,7 @@ GameObject:
   - component: {fileID: 2522292360589649331}
   - component: {fileID: 11837795985439246}
   - component: {fileID: 7274033764621456929}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Burble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -220,9 +223,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  intensityForceLevel: -1
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
+  _innerShape: {fileID: 0}
+  _outerShape: {fileID: 0}
 --- !u!61 &11837795985439246
 BoxCollider2D:
   m_ObjectHideFlags: 0
