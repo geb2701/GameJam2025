@@ -183,6 +183,7 @@ GameObject:
   - component: {fileID: 8207709415743370342}
   - component: {fileID: 2522292360589649331}
   - component: {fileID: 11837795985439246}
+  - component: {fileID: 7274033764621456929}
   m_Layer: 0
   m_Name: Burble
   m_TagString: Untagged
@@ -229,7 +230,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1806330580743581007}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -268,6 +269,43 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.5483664, y: 0.27667665}
   m_EdgeRadius: 0
+--- !u!70 &7274033764621456929
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806330580743581007}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.45, y: 0.34736392}
+  m_Size: {x: 0.6712151, y: 0.27384648}
+  m_Direction: 1
 --- !u!1 &5740206906272165736
 GameObject:
   m_ObjectHideFlags: 0

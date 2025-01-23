@@ -36,6 +36,24 @@ public class Movement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        /*
+        foreach (LayerMask layerMask in quePuedeSaltar)
+        {
+            if (Physics2D.OverlapBox(controladorSuelo.position, dimensionesCaja, 0f, layerMask))
+            {
+                puedeSaltar = true;
+                break;
+            }
+        }*/
+
+        Mover(movimientoHorizontal * Time.fixedDeltaTime, salto);
+
+        salto = false;
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        puedeSaltar = false;
         foreach (LayerMask layerMask in quePuedeSaltar)
         {
             if (Physics2D.OverlapBox(controladorSuelo.position, dimensionesCaja, 0f, layerMask))
@@ -45,9 +63,6 @@ public class Movement : MonoBehaviour
             }
         }
 
-        Mover(movimientoHorizontal * Time.fixedDeltaTime, salto);
-
-        salto = false;
     }
 
     private void Mover(float mover, bool saltar)

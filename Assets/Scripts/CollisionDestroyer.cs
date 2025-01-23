@@ -14,11 +14,4 @@ public class CollisionDestroyer : MonoBehaviour
             }
         }
     }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-
-        Debug.Log("Colisión detectada con: " + collision.gameObject.name);
-    }
-
 }
