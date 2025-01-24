@@ -6,8 +6,7 @@ public class Burble : MonoBehaviour
 {
     public float speed = 1f;
     public int intensityForceLevel = -1;
-    [SerializeField] private LayerMask playerLayer;
-    [SerializeField] private Transform _innerShape, _outerShape;
+    [SerializeField] protected LayerMask playerLayer;
 
     private bool goDown = false;
     private float initialX = 0;
@@ -48,7 +47,7 @@ public class Burble : MonoBehaviour
         },
     };
 
-    private void Start()
+    protected virtual void Start()
     {
         var intensity = Random.Range(0, 10);
         HorizontalMovementLevel horizontalMovement = null;
