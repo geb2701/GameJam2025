@@ -6,8 +6,7 @@ public class Burble : MonoBehaviour
 {
     public float speed = 1f;
     public int intensityForceLevel = -1;
-    [SerializeField] private LayerMask playerLayer;
-    [SerializeField] private Transform _innerShape, _outerShape;
+    [SerializeField] protected LayerMask playerLayer;
 
     private bool goDown = false;
     private float initialX = 0;
@@ -48,7 +47,7 @@ public class Burble : MonoBehaviour
         },
     };
 
-    private void Start()
+    protected virtual void Start()
     {
         var intensity = Random.Range(0, 10);
         HorizontalMovementLevel horizontalMovement = null;
@@ -99,7 +98,7 @@ public class Burble : MonoBehaviour
         transform.position = new Vector3(initialX + horizontalOffset, transform.position.y, transform.position.z);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    protected virtual void OnCollisionEnter2D(Collision2D collision)
     {
         if ((playerLayer.value & (1 << collision.gameObject.layer)) != 0)
         {

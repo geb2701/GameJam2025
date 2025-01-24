@@ -187,7 +187,7 @@ GameObject:
   - component: {fileID: 2522292360589649331}
   - component: {fileID: 7274033764621456929}
   m_Layer: 7
-  m_Name: Burble
+  m_Name: TimeBurble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
