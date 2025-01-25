@@ -3,9 +3,10 @@ using UnityEngine;
 
 public class Pop : MonoBehaviour
 {
+    public AudioClip destructionSound;
+
     private void Start()
     {
-        //sonido
         StartCoroutine(Died());
     }
 
@@ -19,10 +20,29 @@ public class Pop : MonoBehaviour
 
         transform.position -= scaleDifference / 2;*/
     }
+    private void PlayDestructionSound()
+    {
+        if (destructionSound != null)
+        {
+            // Crear un GameObject temporal
+            GameObject tempAudioSource = new GameObject("Explota_Chica_2");
+            AudioSource audioSource = tempAudioSource.AddComponent<AudioSource>();
+
+            // Configurar el AudioSource
+            audioSource.clip = destructionSound;
+            audioSource.Play();
+
+            // Destruir el objeto temporal después de que termine el sonido
+            Destroy(tempAudioSource, destructionSound.length);
+        }
+    }
 
     private IEnumerator Died()
     {
+        PlayDestructionSound();
+
         yield return new WaitForSeconds(0.5f);
+
         Destroy(gameObject);
     }
 }
