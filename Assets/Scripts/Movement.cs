@@ -43,17 +43,14 @@ public class Movement : MonoBehaviour
     private void FixedUpdate()
     {
         var mover = movimientoHorizontal * Time.fixedDeltaTime;
-        Debug.Log(mover);
         if (Physics2D.OverlapBox(detector.position, dimensionesCaja, 0f, pared))
         {
             if (detectorLeft && mover < 0)
             {
-                Debug.Log("reinicio");
                 mover = 0;
             }
             else if (!detectorLeft && mover > 0)
             {
-                Debug.Log("reinicio");
                 mover = 0;
             }
         }

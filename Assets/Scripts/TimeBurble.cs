@@ -3,25 +3,24 @@ using UnityEngine;
 
 public class TimeBurble : Burble
 {
-    public float lifeTime = 2;
+    public float lifeTime = 15;
 
     [SerializeField] private GameObject spriteStart;
     [SerializeField] private GameObject spriteMid;
     [SerializeField] private GameObject spriteEnd;
-    [SerializeField] private GameObject spriteExplote;
 
     private bool isExploting = false;
 
-    protected override void Start()
+    protected new void Start()
     {
         base.Start();
         SpriteRenderer burbleRenderStart = spriteStart.GetComponent<SpriteRenderer>();
         burbleRenderStart.enabled = true;
     }
 
-    protected override void OnCollisionEnter2D(Collision2D collision)
+    protected void OnCollisionEnter2D(Collision2D collision)
     {
-        base.OnCollisionEnter2D(collision);
+        //base.OnCollisionEnter2D(collision);
         if ((1 << collision.gameObject.layer) != 0 && !isExploting)
         {
             isExploting = true;
@@ -49,8 +48,6 @@ public class TimeBurble : Burble
         yield return new WaitForSeconds(timer);
 
         burbleRender.enabled = false;
-        burbleRender = spriteExplote.GetComponent<SpriteRenderer>();
-        burbleRender.enabled = true;
 
         this.gameObject.GetComponent<BoxCollider2D>().enabled = false;
 
@@ -58,17 +55,10 @@ public class TimeBurble : Burble
         GameObject objetoPadre = gameObject.transform.parent.gameObject;
         objetoPadre.GetComponent<Burble>().stopMove = true;
 
-        float tiempoTranscurrido = 0f;
-        float duracion = 0.7f;
-        Vector3 escalaInicial = burbleRender.transform.localScale;
-        Vector3 escalaObjetivo = escalaInicial * 2f;
-
-        while (tiempoTranscurrido < duracion)
+        if (!poping)
         {
-            burbleRender.transform.localScale = Vector3.Lerp(escalaInicial, escalaObjetivo, tiempoTranscurrido / duracion);
-            tiempoTranscurrido += Time.deltaTime;
-            yield return null;
+            Pop();
+            poping = true;
         }
-        Destroy(objetoPadre);
     }
 }

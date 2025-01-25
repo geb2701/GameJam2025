@@ -119,6 +119,24 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &125038624 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2587210720316467042, guid: af1ae363cd7618a409e789683c37392a, type: 3}
+  m_PrefabInstance: {fileID: 488631061}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &125038628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125038624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c543d168fdbac2f4d87387431728b2bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.7
 --- !u!1 &286946487
 GameObject:
   m_ObjectHideFlags: 0
@@ -645,10 +663,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Burble Platform
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 5921249858471501007, guid: af1ae363cd7618a409e789683c37392a, type: 3}
+      propertyPath: pop
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5921249858471501007, guid: af1ae363cd7618a409e789683c37392a, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5921249858471501007, guid: af1ae363cd7618a409e789683c37392a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2587210720316467042, guid: af1ae363cd7618a409e789683c37392a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 125038628}
   m_SourcePrefab: {fileID: 100100000, guid: af1ae363cd7618a409e789683c37392a, type: 3}
 --- !u!1 &519420028
 GameObject:
@@ -880,9 +910,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 767304334}
-  - component: {fileID: 767304333}
   - component: {fileID: 767304335}
-  - component: {fileID: 767304336}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -890,26 +918,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &767304333
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 767304332}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 634acb0e0bef3954eafe5777d704ac86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  burble: {fileID: 1806330580743581007, guid: a41ce177fcf7368438d9ae7395580e95, type: 3}
-  timeMin: 0.8
-  timeMax: 2
-  range: 11
-  minSpeed: 0.5
-  maxSpeed: 1.3
-  minScale: 0.7
-  maxScale: 1.5
 --- !u!4 &767304334
 Transform:
   m_ObjectHideFlags: 0
@@ -919,7 +927,7 @@ Transform:
   m_GameObject: {fileID: 767304332}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -15.04, z: 0}
+  m_LocalPosition: {x: 0, y: -13.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -984,23 +992,7 @@ MonoBehaviour:
   - {fileID: 556621448833189471, guid: 1bd09936e05dbf14a823471793ded9ff, type: 3}
   - {fileID: 556621448833189471, guid: 0d39a372098464f43b8e5fa3d5893dda, type: 3}
   time: 3
---- !u!114 &767304336
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 767304332}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcbc43cc78ff6044c97092658b04f211, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  burblesEasy:
-  - {fileID: 556621448833189471, guid: d3d34187c6d27bd4db59517a34cba0ff, type: 3}
-  burblesMedium: []
-  burblesHard: []
-  time: 2
+  dificulty: 1
 --- !u!1 &809726142
 GameObject:
   m_ObjectHideFlags: 0
@@ -1776,7 +1768,7 @@ Transform:
   m_GameObject: {fileID: 1748907431}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 9.6, z: 0}
+  m_LocalPosition: {x: 0, y: 7.61, z: 0}
   m_LocalScale: {x: 30, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
