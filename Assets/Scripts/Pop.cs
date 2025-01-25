@@ -25,7 +25,7 @@ public class Pop : MonoBehaviour
         if (destructionSound != null)
         {
             // Crear un GameObject temporal
-            GameObject tempAudioSource = new GameObject("Explota_Chica_2");
+            GameObject tempAudioSource = new GameObject("Pop");
             AudioSource audioSource = tempAudioSource.AddComponent<AudioSource>();
 
             // Configurar el AudioSource
