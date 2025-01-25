@@ -7,4 +7,19 @@ public class BurblePlatform : MonoBehaviour
     {
         transform.position -= Vector3.up * speed * Time.deltaTime;
     }
+    protected virtual void OnCollisionEnter2D(Collision2D collision)
+    {
+        if ((1 << collision.gameObject.layer) != 0)
+        {
+            collision.transform.SetParent(transform);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if ((1 << collision.gameObject.layer) != 0)
+        {
+            collision.transform.SetParent(null);
+        }
+    }
 }

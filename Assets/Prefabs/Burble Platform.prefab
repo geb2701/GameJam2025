@@ -270,7 +270,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2363592623226591900}
-  - component: {fileID: 5921249858471501007}
   - component: {fileID: 96138798946522230}
   m_Layer: 7
   m_Name: Burble Platform
@@ -295,29 +294,6 @@ Transform:
   - {fileID: 1679485344953854270}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5921249858471501007
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2587210720316467042}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 000b05536cf19504bb51654350441f0c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1
-  intensityForceLevel: -1
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  stopMove: 0
-  pop: {fileID: 5486327722842232935, guid: 007c0eeb61f60c24d95c6257c1ec5a04, type: 3}
-  lifeTime: 3000
-  spriteStart: {fileID: 0}
-  spriteMid: {fileID: 0}
-  spriteEnd: {fileID: 0}
 --- !u!70 &96138798946522230
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
