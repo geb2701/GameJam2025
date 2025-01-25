@@ -52,17 +52,14 @@ public class Movement : MonoBehaviour
 
         if (puedeSaltar && salto)
         {
-            Debug.Log("Salto");
-            puedeSaltar = false;
             rb2D.AddForce(new Vector2(0f, fuerzaDeSalto));
         }
+        puedeSaltar = false;
         salto = false;
     }
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        puedeSaltar = false;
-
         foreach (LayerMask layerMask in quePuedeSaltar)
         {
             if (ControladorPuedeSaltarEnLayer(layerMask))

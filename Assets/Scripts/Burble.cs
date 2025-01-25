@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -128,9 +127,10 @@ public class Burble : MonoBehaviour
             try
             {
                 GameObject objetoPadre = gameObject?.transform?.parent?.gameObject;
+                Transform[] hijos;
                 if (objetoPadre != null)
                 {
-                    Transform[] hijos = objetoPadre.GetComponentsInChildren<Transform>();
+                    hijos = objetoPadre.GetComponentsInChildren<Transform>();
                     foreach (Transform hijo in hijos)
                     {
                         if (hijo.gameObject.layer == playerLayer)
@@ -139,14 +139,30 @@ public class Burble : MonoBehaviour
                         }
                     }
                 }
-                GameObject newBurble = Instantiate(pop, this.gameObject.transform.localPosition, Quaternion.identity);
+                if (pop != null)
+                {
+                    var position = collision.transform.transform.position;
+                    Debug.Log(position);
+                    position.x += 10;
+                    Debug.Log(position);
+                    GameObject newBurble = Instantiate(pop, position, Quaternion.identity);
+                }
+
+                hijos = gameObject.GetComponentsInChildren<Transform>();
+                foreach (Transform hijo in hijos)
+                {
+                    if (hijo.gameObject.layer == playerLayer)
+                    {
+                        hijo.SetParent(null);
+                    }
+                }
                 Destroy(this.gameObject);
             }
-            catch(System.Exception ex)
+            catch (System.Exception ex)
             {
                 Debug.LogException(ex);
             }
-            
+
         }
     }
 
