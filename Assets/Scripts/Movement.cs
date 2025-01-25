@@ -19,6 +19,12 @@ public class Movement : MonoBehaviour
     [SerializeField] private bool puedeSaltar;
     private bool salto = false;
 
+    [Header("Paredes")]
+    [SerializeField] private LayerMask pared;
+    [SerializeField] private Transform detector;
+
+    private bool detectorLeft = false;
+
     private void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
@@ -37,6 +43,20 @@ public class Movement : MonoBehaviour
     private void FixedUpdate()
     {
         var mover = movimientoHorizontal * Time.fixedDeltaTime;
+        Debug.Log(mover);
+        if (Physics2D.OverlapBox(detector.position, dimensionesCaja, 0f, pared))
+        {
+            if (detectorLeft && mover < 0)
+            {
+                Debug.Log("reinicio");
+                mover = 0;
+            }
+            else if (!detectorLeft && mover > 0)
+            {
+                Debug.Log("reinicio");
+                mover = 0;
+            }
+        }
 
         Vector3 velocidadObjetivo = new Vector2(mover, rb2D.linearVelocity.y);
         rb2D.linearVelocity = Vector3.SmoothDamp(rb2D.linearVelocity, velocidadObjetivo, ref velocidad, suavizadoDeMovimiento);
@@ -83,6 +103,7 @@ public class Movement : MonoBehaviour
 
     private void Girar()
     {
+        detectorLeft = !detectorLeft;
         mirandoDerecha = !mirandoDerecha;
         Vector3 escala = transform.localScale;
         escala.x *= -1;

@@ -1,6 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class TimeBurble : Burble
 {
@@ -23,7 +22,7 @@ public class TimeBurble : Burble
     protected override void OnCollisionEnter2D(Collision2D collision)
     {
         base.OnCollisionEnter2D(collision);
-        if ((playerLayer.value & (1 << collision.gameObject.layer)) != 0 && !isExploting)
+        if ((1 << collision.gameObject.layer) != 0 && !isExploting)
         {
             isExploting = true;
             StartCoroutine(Died());

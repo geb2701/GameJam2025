@@ -32,10 +32,10 @@ public class Spawner : MonoBehaviour
         if (true)//hard
             burbleList.AddRange(burblesHard);
 
-        var burble = Random.Range(0, burbleList.Count -1);
+        var burble = Random.Range(0, burbleList.Count - 1);
 
         GameObject newBurble = Instantiate(burbleList[burble], transform.position, Quaternion.identity);
-
+        newBurble.transform.localScale = Vector3.one * 2;
         StartCoroutine(SpawnBurble());
     }
 }

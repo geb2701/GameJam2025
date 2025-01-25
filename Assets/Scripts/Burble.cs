@@ -93,7 +93,7 @@ public class Burble : MonoBehaviour
         {
             if (goDown)
             {
-                transform.position -= Vector3.up * (speed / 2) * Time.deltaTime;
+                transform.position -= Vector3.up * speed * Time.deltaTime;
             }
             else
             {
@@ -107,7 +107,7 @@ public class Burble : MonoBehaviour
 
     protected virtual void OnCollisionEnter2D(Collision2D collision)
     {
-        if ((playerLayer.value & (1 << collision.gameObject.layer)) != 0 && !poping)
+        if ((1 << collision.gameObject.layer) != 0 && !poping)
         {
             collision.transform.SetParent(transform);
         }
@@ -115,14 +115,17 @@ public class Burble : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if ((playerLayer.value & (1 << collision.gameObject.layer)) != 0)
+        Debug.Log(collision.gameObject.layer);
+        Debug.Log(playerLayer.value);
+        if ((1 << collision.gameObject.layer) != 0)
         {
+            Debug.Log("down");
             goDown = true;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if ((playerLayer.value & (1 << collision.gameObject.layer)) != 0)
+        if ((1 << collision.gameObject.layer) != 0)
         {
             poping = true;
             collision.transform.SetParent(null);
