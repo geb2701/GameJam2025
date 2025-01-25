@@ -16,13 +16,13 @@ public class TimeBurble : Burble
     protected override void Start()
     {
         base.Start();
-        Debug.Log("start");
         SpriteRenderer burbleRenderStart = spriteStart.GetComponent<SpriteRenderer>();
         burbleRenderStart.enabled = true;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    protected override void OnCollisionEnter2D(Collision2D collision)
     {
+        base.OnCollisionEnter2D(collision);
         if ((playerLayer.value & (1 << collision.gameObject.layer)) != 0 && !isExploting)
         {
             isExploting = true;
@@ -53,12 +53,23 @@ public class TimeBurble : Burble
         burbleRender = spriteExplote.GetComponent<SpriteRenderer>();
         burbleRender.enabled = true;
 
-        this.gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
-        this.gameObject.GetComponentInChildren<BoxCollider2D>().enabled = false;
+        this.gameObject.GetComponent<BoxCollider2D>().enabled = false;
 
+        stopMove = true;
+        GameObject objetoPadre = gameObject.transform.parent.gameObject;
+        objetoPadre.GetComponent<Burble>().stopMove = true;
 
-        yield return new WaitForSeconds(1f);
+        float tiempoTranscurrido = 0f;
+        float duracion = 0.7f;
+        Vector3 escalaInicial = burbleRender.transform.localScale;
+        Vector3 escalaObjetivo = escalaInicial * 2f;
 
-        Destroy(this.gameObject);
+        while (tiempoTranscurrido < duracion)
+        {
+            burbleRender.transform.localScale = Vector3.Lerp(escalaInicial, escalaObjetivo, tiempoTranscurrido / duracion);
+            tiempoTranscurrido += Time.deltaTime;
+            yield return null;
+        }
+        Destroy(objetoPadre);
     }
 }

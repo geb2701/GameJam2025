@@ -10,10 +10,12 @@ public class Burble : MonoBehaviour
 
     private bool goDown = false;
     private float initialX = 0;
-    private Coroutine activeCoroutine;
 
     private float horizontalSpeed = 0;
     private float horizontalAmplitude = 0;
+
+    [SerializeField] public bool stopMove = false;
+    [SerializeField] protected GameObject pop;
 
     private List<HorizontalMovementLevel> horizontalMovementLevels = new()
     {
@@ -83,19 +85,23 @@ public class Burble : MonoBehaviour
         horizontalSpeed = Random.Range(horizontalMovement.speedMin, horizontalMovement.speedMax);
         horizontalAmplitude = Random.Range(horizontalMovement.horizontalAmplitudeMin, horizontalMovement.horizontalAmplitudeMax);
     }
-    void Update()
+    protected virtual void Update()
     {
-        if (goDown)
-        {
-            transform.position -= Vector3.up * (speed / 2) * Time.deltaTime;
-        }
+        if (stopMove) return;
         else
         {
-            transform.position += Vector3.up * speed * Time.deltaTime;
-        }
+            if (goDown)
+            {
+                transform.position -= Vector3.up * (speed / 2) * Time.deltaTime;
+            }
+            else
+            {
+                transform.position += Vector3.up * speed * Time.deltaTime;
+            }
 
-        float horizontalOffset = Mathf.Sin(Time.time * horizontalSpeed) * horizontalAmplitude;
-        transform.position = new Vector3(initialX + horizontalOffset, transform.position.y, transform.position.z);
+            float horizontalOffset = Mathf.Sin(Time.time * horizontalSpeed) * horizontalAmplitude;
+            transform.position = new Vector3(initialX + horizontalOffset, transform.position.y, transform.position.z);
+        }
     }
 
     protected virtual void OnCollisionEnter2D(Collision2D collision)
@@ -111,12 +117,6 @@ public class Burble : MonoBehaviour
         if ((playerLayer.value & (1 << collision.gameObject.layer)) != 0)
         {
             goDown = true;
-            if (activeCoroutine != null)
-            {
-                StopCoroutine(activeCoroutine);
-            }
-
-            activeCoroutine = StartCoroutine(CountdownAndGoDown());
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -124,15 +124,30 @@ public class Burble : MonoBehaviour
         if ((playerLayer.value & (1 << collision.gameObject.layer)) != 0)
         {
             collision.transform.SetParent(null);
-            StopCoroutine(CountdownAndGoDown());
-            StartCoroutine(CountdownAndGoDown());
+
+            try
+            {
+                GameObject objetoPadre = gameObject?.transform?.parent?.gameObject;
+                if (objetoPadre != null)
+                {
+                    Transform[] hijos = objetoPadre.GetComponentsInChildren<Transform>();
+                    foreach (Transform hijo in hijos)
+                    {
+                        if (hijo.gameObject.layer == playerLayer)
+                        {
+                            hijo.SetParent(null);
+                        }
+                    }
+                }
+                GameObject newBurble = Instantiate(pop, this.gameObject.transform.localPosition, Quaternion.identity);
+                Destroy(this.gameObject);
+            }
+            catch(System.Exception ex)
+            {
+                Debug.LogException(ex);
+            }
+            
         }
-    }
-    private IEnumerator CountdownAndGoDown()
-    {
-        yield return new WaitForSeconds(2f);
-        goDown = false;
-        activeCoroutine = null;
     }
 
     private class HorizontalMovementLevel

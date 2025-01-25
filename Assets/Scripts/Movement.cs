@@ -14,7 +14,7 @@ public class Movement : MonoBehaviour
     [Header("Salto")]
     [SerializeField] private float fuerzaDeSalto;
     [SerializeField] private LayerMask[] quePuedeSaltar;
-    [SerializeField] private Transform controladorSuelo;
+    [SerializeField] private Transform[] controladoresSuelo;
     [SerializeField] private Vector3 dimensionesCaja;
     [SerializeField] private bool puedeSaltar;
     private bool salto = false;
@@ -62,14 +62,26 @@ public class Movement : MonoBehaviour
     private void OnCollisionStay2D(Collision2D collision)
     {
         puedeSaltar = false;
+
         foreach (LayerMask layerMask in quePuedeSaltar)
         {
-            if (Physics2D.OverlapBox(controladorSuelo.position, dimensionesCaja, 0f, layerMask))
+            if (ControladorPuedeSaltarEnLayer(layerMask))
             {
                 puedeSaltar = true;
                 break;
             }
         }
+    }
+    private bool ControladorPuedeSaltarEnLayer(LayerMask layerMask)
+    {
+        foreach (Transform controladorSuelo in controladoresSuelo)
+        {
+            if (Physics2D.OverlapBox(controladorSuelo.position, dimensionesCaja, 0f, layerMask))
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
     private void Girar()
