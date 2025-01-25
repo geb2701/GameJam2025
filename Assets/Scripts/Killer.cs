@@ -1,18 +1,15 @@
+using System;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class KillPlayer : MonoBehaviour
+public class Killer : MonoBehaviour
 {
-    // Nombre de la escena de Game Over
-    public string gameOverScene = "GameOver";
-
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        // Verifica si el objeto que entra es el jugador
-        if (other.CompareTag("Player"))
+        //
+        if (collision.transform.tag == "Killer")
         {
-            // Lleva a la escena de Game Over
-            SceneManager.LoadScene(gameOverScene);
+            Debug.Log("Game Over");
+            //SceneManager.LoadScene(gameOverScene);
         }
     }
 }
