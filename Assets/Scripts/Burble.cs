@@ -16,6 +16,8 @@ public class Burble : MonoBehaviour
     [SerializeField] public bool stopMove = false;
     [SerializeField] protected GameObject pop;
 
+    bool poping = false;
+
     private List<HorizontalMovementLevel> horizontalMovementLevels = new()
     {
         new ()
@@ -105,7 +107,7 @@ public class Burble : MonoBehaviour
 
     protected virtual void OnCollisionEnter2D(Collision2D collision)
     {
-        if ((playerLayer.value & (1 << collision.gameObject.layer)) != 0)
+        if ((playerLayer.value & (1 << collision.gameObject.layer)) != 0 && !poping)
         {
             collision.transform.SetParent(transform);
         }
@@ -122,6 +124,7 @@ public class Burble : MonoBehaviour
     {
         if ((playerLayer.value & (1 << collision.gameObject.layer)) != 0)
         {
+            poping = true;
             collision.transform.SetParent(null);
 
             try
@@ -141,11 +144,7 @@ public class Burble : MonoBehaviour
                 }
                 if (pop != null)
                 {
-                    var position = collision.transform.transform.position;
-                    Debug.Log(position);
-                    position.x += 10;
-                    Debug.Log(position);
-                    GameObject newBurble = Instantiate(pop, position, Quaternion.identity);
+                    GameObject newBurble = Instantiate(pop, gameObject.transform.position, Quaternion.identity);
                 }
 
                 hijos = gameObject.GetComponentsInChildren<Transform>();
