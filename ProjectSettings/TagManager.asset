@@ -15,7 +15,7 @@ TagManager:
   - Burble
   - World
   - Burble Killer
-  - Burble Spawner
+  - Water
   - 
   - 
   - 
@@ -38,6 +38,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 3717863867
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
