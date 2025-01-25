@@ -313,7 +313,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   stopMove: 0
-  pop: {fileID: 6744679705405390623, guid: 370a9c10812b2764e9e1501911d8e7a7, type: 3}
+  pop: {fileID: 0}
 --- !u!70 &96138798946522230
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

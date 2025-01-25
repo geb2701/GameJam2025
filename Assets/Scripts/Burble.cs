@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -139,14 +138,17 @@ public class Burble : MonoBehaviour
                         }
                     }
                 }
-                GameObject newBurble = Instantiate(pop, this.gameObject.transform.localPosition, Quaternion.identity);
+                if (pop != null)
+                {
+                    GameObject newBurble = Instantiate(pop, this.gameObject.transform.localPosition, Quaternion.identity);
+                }
                 Destroy(this.gameObject);
             }
-            catch(System.Exception ex)
+            catch (System.Exception ex)
             {
                 Debug.LogException(ex);
             }
-            
+
         }
     }
 
