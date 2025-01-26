@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
@@ -54,5 +55,4 @@ public class AudioManager : MonoBehaviour
         SFXsource.PlayOneShot(clip);
 
     }
-
 }
