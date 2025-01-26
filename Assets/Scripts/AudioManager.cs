@@ -41,6 +41,8 @@ public class AudioManager : MonoBehaviour
     public AudioClip Salto_Burbuja_2;
     public AudioClip Salto_Burbuja_3;
 
+    public AudioClip CaeAlAgua;
+
     public static AudioManager Instance { get; private set; }
 
     private void Awake()

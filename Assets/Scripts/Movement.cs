@@ -26,6 +26,7 @@ public class Movement : MonoBehaviour
     [SerializeField] private Transform detector;
 
     private bool detectorLeft = false;
+    public bool canMove = true;
 
     private void Start()
     {
@@ -46,54 +47,64 @@ public class Movement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        var mover = movimientoHorizontal * Time.fixedDeltaTime;
-        if (Physics2D.OverlapBox(detector.position, dimensionesCaja, 0f, pared))
+        if (canMove)
         {
-            animator.SetBool("Jump", false);
-            if (detectorLeft && mover < 0)
+
+            var mover = movimientoHorizontal * Time.fixedDeltaTime;
+            if (Physics2D.OverlapBox(detector.position, dimensionesCaja, 0f, pared))
             {
-                mover = 0;
+                if (detectorLeft && mover < 0)
+                {
+                    mover = 0;
+                }
+                else if (!detectorLeft && mover > 0)
+                {
+                    mover = 0;
+                }
             }
-            else if (!detectorLeft && mover > 0)
+
+            Vector3 velocidadObjetivo = new Vector2(mover, rb2D.linearVelocity.y);
+            rb2D.linearVelocity = Vector3.SmoothDamp(rb2D.linearVelocity, velocidadObjetivo, ref velocidad, suavizadoDeMovimiento);
+
+            if (mover > 0 && !mirandoDerecha)
             {
-                mover = 0;
+                Girar();
             }
-        }
-
-        Vector3 velocidadObjetivo = new Vector2(mover, rb2D.linearVelocity.y);
-        rb2D.linearVelocity = Vector3.SmoothDamp(rb2D.linearVelocity, velocidadObjetivo, ref velocidad, suavizadoDeMovimiento);
-
-        if (mover > 0 && !mirandoDerecha)
-        {
-            Girar();
-        }
-        else if (mover < 0 && mirandoDerecha)
-        {
-            Girar();
-        }
-
-        if (puedeSaltar && salto)
-        {
-            rb2D.AddForce(new Vector2(0f, fuerzaDeSalto));
-            animator.SetBool("Jump", true);
-
-            if (Random.Range(0, 1) == 0)
+            else if (mover < 0 && mirandoDerecha)
             {
-                audioManager.PlaySFX(audioManager.Salto_1_D);
+                Girar();
             }
-            else
+
+            if (puedeSaltar && salto)
             {
-                audioManager.PlaySFX(audioManager.Salto_1_I);
+                rb2D.AddForce(new Vector2(0f, fuerzaDeSalto));
+
+                if (Random.Range(0, 1) == 0)
+                {
+                    audioManager.PlaySFX(audioManager.Salto_1_D);
+                }
+                else
+                {
+                    audioManager.PlaySFX(audioManager.Salto_1_I);
+                }
             }
-        }
 
-        if (rb2D.linearVelocity.y == 0)
-        {
-            animator.SetBool("Jump", false);
-        }
+            if (rb2D.linearVelocity.y == 0 || puedeSaltar)
+            {
+                animator.SetInteger("Jump", 0);
+            }
+            else if (rb2D.linearVelocity.y < 0)
+            {
+                animator.SetInteger("Jump", -1);
+            }
+            else if (rb2D.linearVelocity.y > 0)
+            {
+                animator.SetInteger("Jump", 1);
+            }
 
-        puedeSaltar = false;
-        salto = false;
+            puedeSaltar = false;
+            salto = false;
+        }
     }
 
     private void OnCollisionStay2D(Collision2D collision)

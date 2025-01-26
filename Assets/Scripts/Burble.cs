@@ -98,7 +98,7 @@ public class Burble : MonoBehaviour
     {
         if (collision.gameObject.layer == 6)
         {
-            collision.transform.SetParent(null);
+            collision?.transform?.SetParent(null);
 
             if (!poping)
             {
