@@ -8,5 +8,8 @@ En un mundo donde los gatos son bañados sin su consentimiento, lográ lo que ni
   - Linkedin:
   - Github:
  
+- Matías Pedemonte:
+  - Linkedin: https://www.linkedin.com/in/matias-pedemonte-261398268/
+  - Github: https://github.com/catafrulo
   
 
