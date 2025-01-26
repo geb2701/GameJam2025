@@ -3,7 +3,6 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     private Rigidbody2D rb2D;
-    public Animator animator;
     public AudioManager audioManager;
 
     [Header("Movimiento")]
@@ -91,19 +90,6 @@ public class Movement : MonoBehaviour
                     }
                 }
 
-            }
-
-            if (rb2D.linearVelocity.y == 0 || puedeSaltar)
-            {
-                animator.SetInteger("Jump", 0);
-            }
-            else if (rb2D.linearVelocity.y < 0)
-            {
-                animator.SetInteger("Jump", -1);
-            }
-            else if (rb2D.linearVelocity.y > 0)
-            {
-                animator.SetInteger("Jump", 1);
             }
 
             puedeSaltar = false;
