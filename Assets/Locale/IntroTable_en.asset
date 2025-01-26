@@ -1,0 +1,282 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: IntroTable_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 5e250b2afb84e044d9192cfe9ba94b68, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 8931619417461620741
+  m_TableData:
+  - m_Id: 9928830976
+    m_Localized: "You, the world\u2019s tiniest cat,"
+    m_Metadata:
+      m_Items:
+      - rid: 8931619417461620741
+  - m_Id: 33390209134592
+    m_Localized: have just taken a fantastic cat nap.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33957488750592
+    m_Localized: "You wake up feeling content, \r\nrefreshed, and ready to play."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38535638675456
+    m_Localized: "Mmm, that was great!\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38741520281600
+    m_Localized: "I could go back to sleep, honestly\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38843978739712
+    m_Localized: 'You spot a strange container
+
+      on top of that table that'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39043006853120
+    m_Localized: "definitely wasn\u2019t there before."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39351141396480
+    m_Localized: "It\u2019s full of something green"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39463829762048
+    m_Localized: and tall that looks very suspicious.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39758123102208
+    m_Localized: "The human isn\u2019t around, are they?\r\nHmm\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39957419651072
+    m_Localized: "Suspicious and tasty.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40078886694912
+    m_Localized: 'Like it would feel great
+
+      between your teeth.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40147568422912
+    m_Localized: "Well, what they don\u2019t know\nwon\u2019t hurt them!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 41081996439552
+    m_Localized: 'You try to investigate the
+
+      suspicious green stalks,'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 41194017910784
+    m_Localized: "but unfortunately you can\u2019t\r\nquite reach them."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 41376080064512
+    m_Localized: "You are, after all, \njust a tiny cat."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 41504195080192
+    m_Localized: 'Drastic circumstances call
+
+      for drastic measures.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 41629281808384
+    m_Localized: "In order to bring the \r\nstalks down to your level,"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 41792691892224
+    m_Localized: 'you tilt the container
+
+      further and further,'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 41921683517440
+    m_Localized: "pulling it towards you \r\nwith your weight until\u2013"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42000398020608
+    m_Localized: CRASH!!!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42072066093056
+    m_Localized: "Oops! It would seem your \r\ndetermination"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42442360221696
+    m_Localized: "was too much for the \r\nstrange container,"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42598556102656
+    m_Localized: 'and it all came
+
+      tumbling down.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42694098153472
+    m_Localized: The green stalks litter the floor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42907995074560
+    m_Localized: "along with a brown \r\nsea of mushy dirt."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42971861741568
+    m_Localized: 'You consider walking
+
+      around the dirt,'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43127071961088
+    m_Localized: "but there is no way \r\nto reach the stalks"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43249021349888
+    m_Localized: 'without going
+
+      straight through it.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43319452102656
+    m_Localized: "In the end, you walk directly\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43474221920256
+    m_Localized: into the dirt and are rewarded
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43602802503680
+    m_Localized: "with delicious, delicious \r\nfresh stalks to chew on."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43627066552320
+    m_Localized: 'They do feel great
+
+      between your teeth.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43743567540224
+    m_Localized: You continue gnawing on them,
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43955027570688
+    m_Localized: 'settling down in the dirt to
+
+      make yourself comfortable,'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44040503291904
+    m_Localized: "when suddenly\u2013"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44114692141056
+    m_Localized: 'Ollie! Oh my god,
+
+      what did you do!?'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44287396802560
+    m_Localized: I just planted that rosemary
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44435808055296
+    m_Localized: "and now there\u2019s dirt all over the place."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44522328158208
+    m_Localized: "Ugh\u2026 that\u2019s it, mister."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44555077283840
+    m_Localized: "It\u2019s about time you got a bath."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44695020236800
+    m_Localized: '!!!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44716679622656
+    m_Localized: "You and the human don\u2019t \r\nspeak the same language,"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44821398810624
+    m_Localized: "but you know enough \r\nto recognize that word."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44959324303360
+    m_Localized: The dreaded B-A-T-H.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45110453465088
+    m_Localized: 'You try to make a run for it,
+
+      but they scoop you up'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45181723078656
+    m_Localized: 'with their giant hands
+
+      before you can scurry away.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45257438654464
+    m_Localized: Noooo!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45440943648768
+    m_Localized: "There it is, that dreaded \r\nprison the human calls \u201Cthe
+      tub.\u201D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45442004807680
+    m_Localized: "You don\u2019t know how \r\nlong it will take."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45672611835904
+    m_Localized: "You don\u2019t know how\nfar you will go.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45954078994432
+    m_Localized: 'But you do know that this
+
+      has become a battle of wills.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 46076053549056
+    m_Localized: 'You will have to do whatever
+
+      it takes to avoid this'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 46256018550784
+    m_Localized: "so-called bath and escape\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 46316047429632
+    m_Localized: from the tub.
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 8931619417461620741
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 
+        m_SharedEntries:
+        - id: 9928830976

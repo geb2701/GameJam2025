@@ -1,0 +1,255 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: IntroTable_es
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: es
+  m_SharedData: {fileID: 11400000, guid: 5e250b2afb84e044d9192cfe9ba94b68, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 8931619417461620742
+  m_TableData:
+  - m_Id: 9928830976
+    m_Localized: "Sos el gatito m\xE1s \nchiquito del mundo\r"
+    m_Metadata:
+      m_Items:
+      - rid: 8931619417461620742
+  - m_Id: 33390209134592
+    m_Localized: "y est\xE1s disfrutando de una siesta\ndespu\xE9s de darte una panzada
+      de catnip."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33957488750592
+    m_Localized: "Te despert\xE1s satisfecho y\ncon muchas ganas de jugar."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38535638675456
+    m_Localized: "Mmm, \xA1eso estuvo riqu\xEDsimo!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38741520281600
+    m_Localized: "La verdad, podr\xEDa\r\nseguir durmiendo\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38843978739712
+    m_Localized: Justo arriba de la mesa,
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39043006853120
+    m_Localized: "ves un contenedor que\nno hab\xEDas notado antes.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39351141396480
+    m_Localized: "Est\xE1 repleto de un yuyo verde"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39463829762048
+    m_Localized: de aspecto sospechoso.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39758123102208
+    m_Localized: "Mmm... Creo que el humano\nno est\xE1 en casa ahora."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39957419651072
+    m_Localized: Sospechoso y delicioso.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40078886694912
+    m_Localized: 'Se te hace agua la boca de solo
+
+      imaginarlo entre tus dientes.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40147568422912
+    m_Localized: "Bueno... Ojos que no ven,\ncoraz\xF3n que no siente, \xBFcierto?\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 41081996439552
+    m_Localized: "Trat\xE1s de alcanzar\r\nel yuyo verde,\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 41194017910784
+    m_Localized: pero no te da la altura.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 41376080064512
+    m_Localized: "Despu\xE9s de todo, sos\nun gatito muy chiquito."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 41504195080192
+    m_Localized: "Esta situaci\xF3n dr\xE1stica\r\namerita medidas dr\xE1sticas.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 41629281808384
+    m_Localized: Para alcanzar el yuyo,
+    m_Metadata:
+      m_Items: []
+  - m_Id: 41792691892224
+    m_Localized: "trat\xE1s de empujar el\r\ncontenedor de a poquito\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 41921683517440
+    m_Localized: "Est\xE1 cada vez m\xE1s\r\ncerca tuyo, hasta que\u2026\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42000398020608
+    m_Localized: "\xA1CRAC!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42072066093056
+    m_Localized: "\xA1Ups!\nParece que tu esfuerzo"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42442360221696
+    m_Localized: "fue demasiado para el\r\npobre contenedor,\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42598556102656
+    m_Localized: "que termina rodando y\r\nestrol\xE1ndose contra el suelo.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42694098153472
+    m_Localized: "El yuyo verde yace\r\nesparcido por el suelo,\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42907995074560
+    m_Localized: hundido en un mar de tierra.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42971861741568
+    m_Localized: "Analiz\xE1s si hay manera de\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43249021349888
+    m_Localized: "el premio sin atravesarla.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43127071961088
+    m_Localized: "esquivar esa mugre, pero\r\nse ve dif\xEDcil conseguir\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43319452102656
+    m_Localized: "Al final, decid\xEDs que no hay\r\notro camino posible hacia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43474221920256
+    m_Localized: "ese sabroso yuyo masticable\r\ny te pon\xE9s a escarbar la tierra.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43602802503680
+    m_Localized: "Tal como imaginabas,\r\nel yuyo te hace unas\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43627066552320
+    m_Localized: "cosquillas divertidas\r\nen la boca.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43743567540224
+    m_Localized: "No pod\xE9s parar de morderlo,\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43955027570688
+    m_Localized: "as\xED que te recost\xE1s sobre\r\nla tierra para ponerte c\xF3modo,\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44040503291904
+    m_Localized: "cuando de pronto\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44114692141056
+    m_Localized: "\xA1Ollie!\r\nNooo, \xA1\xBFqu\xE9 hiciste?!\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44287396802560
+    m_Localized: "\xA1Acabo de plantar ese romero y\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44435808055296
+    m_Localized: "ya hay mugre por todos lados!\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44522328158208
+    m_Localized: "Agh\u2026 Se termin\xF3."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44555077283840
+    m_Localized: "Te vas a dar un ba\xF1o\r\nquieras o no.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44695020236800
+    m_Localized: '!!!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44716679622656
+    m_Localized: "El humano y vos no\r\ncomparten el mismo idioma,\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44821398810624
+    m_Localized: "pero entend\xE9s lo suficiente como\r\npara reconocer esa palabra.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44959324303360
+    m_Localized: "El odioso B A \xD1 O.\nTrat\xE1s de escapar,\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45110453465088
+    m_Localized: "pero tu due\xF1o te levanta\r\nde un tir\xF3n con sus manos\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45181723078656
+    m_Localized: "gigantescas antes de que\r\npuedas escabullirte.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45257438654464
+    m_Localized: "\xA1Noooo!\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45440943648768
+    m_Localized: "Ah\xED estaba esa temible prisi\xF3n\r\nque los humanos llaman
+      \u201Ctina\u201D.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45442004807680
+    m_Localized: "No sab\xE9s cu\xE1nto tiempo\r\nvas a estar ah\xED.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45672611835904
+    m_Localized: "No sab\xE9s cu\xE1nto\r\nvas a poder aguantar.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45954078994432
+    m_Localized: "Pero sab\xE9s que se reduce\r\na un duelo de voluntades.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 46076053549056
+    m_Localized: "Vas a tener que hacer todo\r\nlo necesario para evitar\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 46256018550784
+    m_Localized: "la pesadilla del ba\xF1o\r\ny escapar\u2026 \r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 46316047429632
+    m_Localized: de la tina.
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 8931619417461620742
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 
+        m_SharedEntries:
+        - id: 9928830976
