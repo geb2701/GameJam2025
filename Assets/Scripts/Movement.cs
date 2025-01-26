@@ -4,6 +4,7 @@ public class Movement : MonoBehaviour
 {
     private Rigidbody2D rb2D;
     public Animator animator;
+    public AudioManager audioManager;
 
     [Header("Movimiento")]
     private float movimientoHorizontal = 0f;
@@ -73,6 +74,19 @@ public class Movement : MonoBehaviour
         {
             rb2D.AddForce(new Vector2(0f, fuerzaDeSalto));
             animator.SetBool("Jump", true);
+
+            if (audioManager != null)
+            {
+
+                if (Random.Range(0, 1) == 0)
+                {
+                    audioManager.PlaySFX(audioManager.Salto_1_D);
+                }
+                else
+                {
+                    audioManager.PlaySFX(audioManager.Salto_1_I);
+                }
+            }
         }
 
         if (rb2D.linearVelocity.y == 0)

@@ -1,12 +1,28 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Pop : MonoBehaviour
 {
-    public AudioClip destructionSound;
+    public AudioManager audioManager;
 
+    private List<AudioClip> audioList = new List<AudioClip>();
     private void Start()
     {
+        audioManager = AudioManager.Instance;
+        if (audioManager != null)
+        {
+            audioList = new()
+            {
+                audioManager.Explota_Chica_1,
+                audioManager.Explota_Chica_2,
+                audioManager.Explota_Grande_1,
+                audioManager.Explota_Grande_2,
+                audioManager.Explota_Mediana_1,
+                audioManager.Explota_Mediana_2,
+            };
+        }
+
         StartCoroutine(Died());
     }
 
@@ -20,26 +36,11 @@ public class Pop : MonoBehaviour
 
         transform.position -= scaleDifference / 2;*/
     }
-    private void PlayDestructionSound()
-    {
-        if (destructionSound != null)
-        {
-            // Crear un GameObject temporal
-            GameObject tempAudioSource = new GameObject("Pop");
-            AudioSource audioSource = tempAudioSource.AddComponent<AudioSource>();
-
-            // Configurar el AudioSource
-            audioSource.clip = destructionSound;
-            audioSource.Play();
-
-            // Destruir el objeto temporal después de que termine el sonido
-            Destroy(tempAudioSource, destructionSound.length);
-        }
-    }
 
     private IEnumerator Died()
     {
-        PlayDestructionSound();
+        if (audioManager != null)
+            audioManager.PlaySFX(audioList[Random.Range(0, audioList.Count - 1)]);
 
         yield return new WaitForSeconds(0.5f);
 

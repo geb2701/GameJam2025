@@ -554,9 +554,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41e40753e9d15434d95281e4384a2861, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidadDeMovimiento: 100
-  suavizadoDeMovimiento: 0.372
-  fuerzaDeSalto: 100
+  animator: {fileID: 0}
+  audioManager: {fileID: 0}
+  velocidadDeMovimiento: 700
+  suavizadoDeMovimiento: 0.25
+  fuerzaDeSalto: 700
   quePuedeSaltar:
   - serializedVersion: 2
     m_Bits: 128
@@ -570,12 +572,12 @@ MonoBehaviour:
   - {fileID: 6375702157187447572}
   - {fileID: 5275785312669527972}
   - {fileID: 8721200547761206744}
-  dimensionesCaja: {x: 0, y: 0, z: 0}
+  dimensionesCaja: {x: 0.5, y: 0.5, z: 0.5}
   puedeSaltar: 0
   pared:
     serializedVersion: 2
     m_Bits: 256
-  detector: {fileID: 0}
+  detector: {fileID: 5275785312669527972}
 --- !u!1 &8763736500295157505
 GameObject:
   m_ObjectHideFlags: 0

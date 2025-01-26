@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 //using UnityEngine.EventSystem;
@@ -11,16 +9,39 @@ public class SC_MainMenu : MonoBehaviour
     public GameObject Creditos;
     public GameObject MenuAudio;
     public GameObject MenuIdioma;
-   // public GameObject eventSelector;
-    
+    // public GameObject eventSelector;
+    private AsyncOperation asyncOperation;
+
+    public AudioManager audioManager;
+
+
+
     void Start()
     {
+        audioManager.musicSource.Stop();
+        audioManager.musicSource.clip = audioManager.Background_Menu;
+        audioManager.musicSource.Play();
         MainMenuButton();
+        StartCoroutine(PreloadScene());
+    }
+
+    private System.Collections.IEnumerator PreloadScene()
+    {
+        asyncOperation = SceneManager.LoadSceneAsync(1);
+        asyncOperation.allowSceneActivation = false;
+
+        while (!asyncOperation.isDone)
+        {
+            yield return null;
+        }
     }
 
     public void Jugar()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene");
+        audioManager.musicSource.Stop();
+        audioManager.musicSource.clip = audioManager.Background_Juego;
+        audioManager.musicSource.Play();
+        SceneManager.LoadScene(1);
     }
 
 
@@ -48,16 +69,16 @@ public class SC_MainMenu : MonoBehaviour
         MenuOpciones.SetActive(true);
         Creditos.SetActive(false);
         MenuAudio.SetActive(false);
-        MenuIdioma.SetActive(false);        
+        MenuIdioma.SetActive(false);
     }
-    
+
     public void OpcionesAudio()
     {
         Menu.SetActive(false);
         MenuOpciones.SetActive(false);
         Creditos.SetActive(false);
         MenuAudio.SetActive(true);
-        MenuIdioma.SetActive(false);    
+        MenuIdioma.SetActive(false);
     }
     public void OpcionesIdioma()
     {
@@ -65,21 +86,13 @@ public class SC_MainMenu : MonoBehaviour
         MenuOpciones.SetActive(false);
         Creditos.SetActive(false);
         MenuAudio.SetActive(false);
-        MenuIdioma.SetActive(true);    
+        MenuIdioma.SetActive(true);
     }
     public void Salir()
     {
         Application.Quit();
     }
-    /*public void SetPatita(GameObject _gameObject)
-    {
-        patita = eventSelector.EventSystem.SetSelectedGameObject(_gameObject);
 
-        
-
-    }
-*/
-        
 }
 
 

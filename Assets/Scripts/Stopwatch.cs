@@ -1,19 +1,17 @@
-﻿using UnityEngine;
-using UnityEngine.UI;
+﻿using TMPro;
+using UnityEngine;
 
 public class Stopwatch : MonoBehaviour
 {
-    [SerializeField] private Text timerText; // Referencia al Text de UI donde mostrar el tiempo
-    [SerializeField] private Spawner spawner; // Referencia al Text de UI donde mostrar el tiempo
+    [SerializeField] private TextMeshProUGUI timerText;
+    [SerializeField] private Spawner spawner;
     private float timeElapsed = 0f;
-    private int lastDif = -1;
 
 
     void Update()
     {
         timeElapsed += Time.deltaTime;
-        //timerText.text = Mathf.FloorToInt(timeElapsed).ToString();
-        Debug.Log(Mathf.FloorToInt(timeElapsed));
+        timerText.text = Mathf.FloorToInt(timeElapsed).ToString();
         ChangeDificult(Mathf.FloorToInt(timeElapsed));
     }
 

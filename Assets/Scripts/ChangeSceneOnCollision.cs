@@ -5,13 +5,14 @@ public class ChangeSceneOnCollision : MonoBehaviour
 {
     [SerializeField] private string sceneName;
     private AsyncOperation asyncOperation;
+    public AudioManager audioManager;
     private void Start()
     {
         StartCoroutine(PreloadScene());
     }
     private System.Collections.IEnumerator PreloadScene()
     {
-        asyncOperation = SceneManager.LoadSceneAsync(1);
+        asyncOperation = SceneManager.LoadSceneAsync(2);
         asyncOperation.allowSceneActivation = false;
 
         while (!asyncOperation.isDone)
@@ -23,7 +24,10 @@ public class ChangeSceneOnCollision : MonoBehaviour
     {
         if (collider.gameObject.layer == 6)
         {
-            SceneManager.LoadScene(1);
+            audioManager.musicSource.Stop();
+            audioManager.musicSource.clip = audioManager.Background_End;
+            audioManager.musicSource.Play();
+            SceneManager.LoadScene(2);
         }
     }
 }
