@@ -5,9 +5,10 @@ public class ChangeSceneOnCollision : MonoBehaviour
 {
     [SerializeField] private string sceneName;
     private AsyncOperation asyncOperation;
-    public AudioManager audioManager;
+    private AudioManager audioManager;
     private void Start()
     {
+        audioManager = AudioManager.Instance;
         StartCoroutine(PreloadScene());
     }
     private System.Collections.IEnumerator PreloadScene()

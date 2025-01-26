@@ -12,12 +12,14 @@ public class SC_MainMenu : MonoBehaviour
     // public GameObject eventSelector;
     private AsyncOperation asyncOperation;
 
-    public AudioManager audioManager;
-
+    private AudioManager audioManager;
+    public SpriteRenderer titulo;
 
 
     void Start()
     {
+        audioManager = AudioManager.Instance;
+        titulo.enabled = true;
         audioManager.musicSource.Stop();
         audioManager.musicSource.clip = audioManager.Background_Menu;
         audioManager.musicSource.Play();
@@ -47,6 +49,7 @@ public class SC_MainMenu : MonoBehaviour
 
     public void MainMenuButton()
     {
+        titulo.enabled = true;
         Menu.SetActive(true);
         MenuOpciones.SetActive(false);
         Creditos.SetActive(false);
@@ -56,6 +59,8 @@ public class SC_MainMenu : MonoBehaviour
 
     public void CreditsButton()
     {
+
+        titulo.enabled = false;
         Menu.SetActive(false);
         MenuOpciones.SetActive(false);
         Creditos.SetActive(true);

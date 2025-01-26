@@ -43,10 +43,20 @@ public class AudioManager : MonoBehaviour
 
     public static AudioManager Instance { get; private set; }
 
-    private void Start()
+    private void Awake()
     {
-        Instance = this;
         musicSource.loop = true;
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else if (Instance != this)
+        {
+            Destroy(gameObject);
+        }
+
+        DontDestroyOnLoad(gameObject);
+
     }
 
     public void PlaySFX(AudioClip clip)

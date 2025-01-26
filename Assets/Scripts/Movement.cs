@@ -4,7 +4,7 @@ public class Movement : MonoBehaviour
 {
     private Rigidbody2D rb2D;
     public Animator animator;
-    public AudioManager audioManager;
+    private AudioManager audioManager;
 
     [Header("Movimiento")]
     private float movimientoHorizontal = 0f;
@@ -29,6 +29,7 @@ public class Movement : MonoBehaviour
 
     private void Start()
     {
+        audioManager = AudioManager.Instance;
         rb2D = GetComponent<Rigidbody2D>();
     }
 
@@ -76,17 +77,13 @@ public class Movement : MonoBehaviour
             rb2D.AddForce(new Vector2(0f, fuerzaDeSalto));
             animator.SetBool("Jump", true);
 
-            if (audioManager != null)
+            if (Random.Range(0, 1) == 0)
             {
-
-                if (Random.Range(0, 1) == 0)
-                {
-                    audioManager.PlaySFX(audioManager.Salto_1_D);
-                }
-                else
-                {
-                    audioManager.PlaySFX(audioManager.Salto_1_I);
-                }
+                audioManager.PlaySFX(audioManager.Salto_1_D);
+            }
+            else
+            {
+                audioManager.PlaySFX(audioManager.Salto_1_I);
             }
         }
 
