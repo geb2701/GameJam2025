@@ -39,6 +39,7 @@ public class Movement : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             salto = true;
+            Debug.Log("<color=#dfb>¡Saltaste!</color>");
         }
     }
 

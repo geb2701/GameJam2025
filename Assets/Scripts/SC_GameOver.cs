@@ -6,8 +6,8 @@ public class SC_GameOver : MonoBehaviour
     public AudioManager audioManager;
     public void Jugar()
     {
-        audioManager.musicSource.Stop();
         SceneManager.LoadScene("Level_Scene");
+        audioManager.musicSource.Stop();
         audioManager.musicSource.clip = audioManager.Background_Juego;
         audioManager.musicSource.Play();
     }
