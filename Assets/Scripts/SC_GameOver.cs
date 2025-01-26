@@ -7,16 +7,16 @@ public class SC_GameOver : MonoBehaviour
     public void Jugar()
     {
         audioManager.musicSource.Stop();
+        SceneManager.LoadScene("Level_Scene");
         audioManager.musicSource.clip = audioManager.Background_Juego;
         audioManager.musicSource.Play();
-        SceneManager.LoadScene(1);
     }
 
     public void Menu()
     {
+        SceneManager.LoadScene("Main_Menu_Scene");
         audioManager.musicSource.Stop();
         audioManager.musicSource.clip = audioManager.Background_Menu;
         audioManager.musicSource.Play();
-        SceneManager.LoadScene(0);
     }
 }

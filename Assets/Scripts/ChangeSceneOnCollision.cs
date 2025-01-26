@@ -27,6 +27,7 @@ public class ChangeSceneOnCollision : MonoBehaviour
             audioManager.musicSource.Stop();
             audioManager.musicSource.clip = audioManager.Background_End;
             audioManager.musicSource.Play();
+            Debug.Log("<color=#7df>Caiste al agua: </color><color=#f77>Game Over</color>");
             SceneManager.LoadScene(2);
         }
     }
