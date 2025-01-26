@@ -2880,6 +2880,10 @@ PrefabInstance:
       propertyPath: queEsSuelo.m_Bits
       value: 384
       objectReference: {fileID: 0}
+    - target: {fileID: 6280118468352919082, guid: 63b53ce915cd7694c9b5799a872a92b3, type: 3}
+      propertyPath: quePuedeSaltar.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6339050221538505428, guid: 63b53ce915cd7694c9b5799a872a92b3, type: 3}
       propertyPath: m_LocalPosition.y
       value: -1.2

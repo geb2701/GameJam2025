@@ -24,26 +24,14 @@ public class SC_MainMenu : MonoBehaviour
         audioManager.musicSource.clip = audioManager.Background_Menu;
         audioManager.musicSource.Play();
         MainMenuButton();
-        StartCoroutine(PreloadScene());
-    }
-
-    private System.Collections.IEnumerator PreloadScene()
-    {
-        asyncOperation = SceneManager.LoadSceneAsync(1);
-        asyncOperation.allowSceneActivation = false;
-
-        while (!asyncOperation.isDone)
-        {
-            yield return null;
-        }
     }
 
     public void Jugar()
     {
         audioManager.musicSource.Stop();
-        audioManager.musicSource.clip = audioManager.Background_Juego;
+        audioManager.musicSource.clip = audioManager.Background_Anim;
         audioManager.musicSource.Play();
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(3);
     }
 
 
@@ -70,6 +58,7 @@ public class SC_MainMenu : MonoBehaviour
 
     public void OpcionesButton()
     {
+        titulo.enabled = true;
         Menu.SetActive(false);
         MenuOpciones.SetActive(true);
         Creditos.SetActive(false);
@@ -79,6 +68,7 @@ public class SC_MainMenu : MonoBehaviour
 
     public void OpcionesAudio()
     {
+        titulo.enabled = false;
         Menu.SetActive(false);
         MenuOpciones.SetActive(false);
         Creditos.SetActive(false);

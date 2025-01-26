@@ -22,10 +22,11 @@ public class ChangeSceneOnCollision : MonoBehaviour
     }
     private IEnumerator LoadScene(float waitTime)
     {
-        yield return new WaitForSeconds(waitTime);
+
         audioManager.musicSource.Stop();
         audioManager.musicSource.clip = audioManager.Background_End;
         audioManager.musicSource.Play();
+        yield return new WaitForSeconds(waitTime);
         Debug.Log("<color=#7df>Caiste al agua: </color><color=#f77>Game Over</color>");
         SceneManager.LoadScene(2);
     }

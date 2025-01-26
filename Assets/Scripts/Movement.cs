@@ -79,14 +79,18 @@ public class Movement : MonoBehaviour
             {
                 rb2D.AddForce(new Vector2(0f, fuerzaDeSalto));
 
-                if (Random.Range(0, 1) == 0)
+                if (!(audioManager == null || audioManager?.Salto_1_D == null || audioManager?.Salto_1_I == null))
                 {
-                    audioManager.PlaySFX(audioManager.Salto_1_D);
+                    if (Random.Range(0, 1) == 0)
+                    {
+                        audioManager.PlaySFX(audioManager.Salto_1_D);
+                    }
+                    else
+                    {
+                        audioManager.PlaySFX(audioManager.Salto_1_I);
+                    }
                 }
-                else
-                {
-                    audioManager.PlaySFX(audioManager.Salto_1_I);
-                }
+
             }
 
             if (rb2D.linearVelocity.y == 0 || puedeSaltar)
