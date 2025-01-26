@@ -41,7 +41,7 @@ public class SC_MainMenu : MonoBehaviour
         audioManager.musicSource.Stop();
         audioManager.musicSource.clip = audioManager.Background_Juego;
         audioManager.musicSource.Play();
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("Intro_Scene");
     }
 
 
