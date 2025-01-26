@@ -1771,7 +1771,7 @@ MonoBehaviour:
   - {fileID: 556621448833189471, guid: 6887df26be00e5e46a591d0c7db4498a, type: 3}
   - {fileID: 556621448833189471, guid: 1bd09936e05dbf14a823471793ded9ff, type: 3}
   - {fileID: 556621448833189471, guid: 0d39a372098464f43b8e5fa3d5893dda, type: 3}
-  time: 8
+  time: 6
   dificulty: 1
 --- !u!1 &998445591 stripped
 GameObject:

@@ -25,17 +25,17 @@ public class SC_GameOver : MonoBehaviour
     }
     public void Jugar()
     {
-        SceneManager.LoadScene("Level_Scene");
         audioManager.musicSource.Stop();
         audioManager.musicSource.clip = audioManager.Background_Juego;
         audioManager.musicSource.Play();
+        SceneManager.LoadScene("Level_Scene");
     }
 
     public void Menu()
     {
-        SceneManager.LoadScene("Main_Menu_Scene");
         audioManager.musicSource.Stop();
         audioManager.musicSource.clip = audioManager.Background_Menu;
         audioManager.musicSource.Play();
+        SceneManager.LoadScene("Main_Menu_Scene");
     }
 }

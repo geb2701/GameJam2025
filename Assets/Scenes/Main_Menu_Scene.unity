@@ -7838,10 +7838,6 @@ PrefabInstance:
       propertyPath: m_PlayOnAwake
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4867238829470867529, guid: 479dd8ae470a74e429565dff1367deb4, type: 3}
-      propertyPath: Background_End
-      value: 
-      objectReference: {fileID: 8300000, guid: 423cedf9ac35eb248861a302cd85dc42, type: 3}
     - target: {fileID: 6446091959727301815, guid: 479dd8ae470a74e429565dff1367deb4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

@@ -1,7 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 using UnityEngine.Localization;
 
 
@@ -22,9 +21,9 @@ public class DialogueController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
         {
-            if(_start)
+            if (_start)
             {
                 dialogueAnimator.SetTrigger("entry");
                 _start = false;
@@ -37,7 +36,7 @@ public class DialogueController : MonoBehaviour
 
     }
 
-        void NextSentence()
+    void NextSentence()
     {
         if (whichStringCurrently <= myStrings.Length - 1)
         {
@@ -56,7 +55,7 @@ public class DialogueController : MonoBehaviour
     IEnumerator WriteSentence()
     {
         talkingText.text = myStrings[whichStringCurrently].GetLocalizedString();
-            yield return new WaitForSeconds(dialSpeed);
+        yield return new WaitForSeconds(dialSpeed);
         /*foreach (char Character in sentence.ToCharArray())
         {
             talkingText.text += Character;

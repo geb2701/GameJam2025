@@ -308,9 +308,9 @@ MonoBehaviour:
   musicSource: {fileID: 7586639299505337142}
   SFXsource: {fileID: 3417197892612981302}
   Background_Menu: {fileID: 8300000, guid: d04fd7e4ba996544694bd8e0aada2cc5, type: 3}
-  Background_Anim: {fileID: 0}
+  Background_Anim: {fileID: 8300000, guid: 3fee117c9c4f9f0478017100683c996f, type: 3}
   Background_Juego: {fileID: 8300000, guid: 9a6412cb3b50e5547be64a8729018791, type: 3}
-  Background_End: {fileID: 8300000, guid: f71492a121fbfe340abb0f31cb323d29, type: 3}
+  Background_End: {fileID: 8300000, guid: 423cedf9ac35eb248861a302cd85dc42, type: 3}
   baniaderaLlenandose: {fileID: 8300000, guid: cf2d9ba635c50224e904d26d994799db, type: 3}
   Explota_Chica_1: {fileID: 8300000, guid: 6de70443457c3e64486da72c86a41ab7, type: 3}
   Explota_Chica_2: {fileID: 8300000, guid: ea51d3d3b9071ae45963e260f4d90736, type: 3}
