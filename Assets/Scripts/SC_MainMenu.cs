@@ -12,7 +12,7 @@ public class SC_MainMenu : MonoBehaviour
     // public GameObject eventSelector;
     private AsyncOperation asyncOperation;
 
-    private AudioManager audioManager;
+    public AudioManager audioManager;
     public SpriteRenderer titulo;
 
 

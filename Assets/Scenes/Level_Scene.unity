@@ -632,7 +632,7 @@ Canvas:
   m_RenderMode: 1
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
@@ -1430,7 +1430,6 @@ GameObject:
   m_Component:
   - component: {fileID: 613001806}
   - component: {fileID: 613001810}
-  - component: {fileID: 613001811}
   - component: {fileID: 613001809}
   - component: {fileID: 613001807}
   - component: {fileID: 613001808}
@@ -1598,18 +1597,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &613001811
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 613001805}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a9d78ae644bd714ab236eec3dc086ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -2806,18 +2793,6 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 923234863661536966, guid: 63b53ce915cd7694c9b5799a872a92b3, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 923234863661536966, guid: 63b53ce915cd7694c9b5799a872a92b3, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.0782534
-      objectReference: {fileID: 0}
-    - target: {fileID: 923234863661536966, guid: 63b53ce915cd7694c9b5799a872a92b3, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2.174607
-      objectReference: {fileID: 0}
-    - target: {fileID: 923234863661536966, guid: 63b53ce915cd7694c9b5799a872a92b3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -2856,10 +2831,6 @@ PrefabInstance:
     - target: {fileID: 923234863661536966, guid: 63b53ce915cd7694c9b5799a872a92b3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 923234863661536966, guid: 63b53ce915cd7694c9b5799a872a92b3, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3156900587950532772, guid: 63b53ce915cd7694c9b5799a872a92b3, type: 3}
       propertyPath: m_LocalScale.x

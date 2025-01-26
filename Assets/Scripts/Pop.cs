@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Pop : MonoBehaviour
 {
-    private AudioManager audioManager;
+    public AudioManager audioManager;
 
     private List<AudioClip> audioList = new List<AudioClip>();
     private void Start()

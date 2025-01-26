@@ -9,7 +9,7 @@ public class BurblePlatform : MonoBehaviour
     }
     protected virtual void OnCollisionEnter2D(Collision2D collision)
     {
-        if ((1 << collision.gameObject.layer) != 0)
+        if (collision.gameObject.layer == 6)
         {
             collision.transform.SetParent(transform);
         }
@@ -17,7 +17,7 @@ public class BurblePlatform : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if ((1 << collision.gameObject.layer) != 0)
+        if (collision.gameObject.layer == 6)
         {
             collision.transform.SetParent(null);
         }

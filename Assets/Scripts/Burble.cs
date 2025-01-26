@@ -88,7 +88,7 @@ public class Burble : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if ((1 << collision.gameObject.layer) != 0)
+        if (collision.gameObject.layer == 6)
         {
             goDown = true;
             isExploting = true;
@@ -96,7 +96,7 @@ public class Burble : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if ((1 << collision.gameObject.layer) != 0)
+        if (collision.gameObject.layer == 6)
         {
             collision.transform.SetParent(null);
 
@@ -109,7 +109,7 @@ public class Burble : MonoBehaviour
     }
     protected virtual void OnCollisionEnter2D(Collision2D collision)
     {
-        if ((1 << collision.gameObject.layer) != 0)
+        if (collision.gameObject.layer == 6)
         {
             if (!poping)
             {

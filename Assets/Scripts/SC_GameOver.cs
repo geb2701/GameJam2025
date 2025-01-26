@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class SC_GameOver : MonoBehaviour
 {
-    private AudioManager audioManager;
+    public AudioManager audioManager;
     public SpriteRenderer inlges;
     public SpriteRenderer español;
 

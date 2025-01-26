@@ -4,7 +4,7 @@ public class Movement : MonoBehaviour
 {
     private Rigidbody2D rb2D;
     public Animator animator;
-    private AudioManager audioManager;
+    public AudioManager audioManager;
 
     [Header("Movimiento")]
     private float movimientoHorizontal = 0f;
