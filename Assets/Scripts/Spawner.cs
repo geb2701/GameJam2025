@@ -16,7 +16,7 @@ public class Spawner : MonoBehaviour
     [SerializeField]
     private float time = 2f;
 
-    [Range(1, 10)][SerializeField] private int dificulty = 1;
+    [Range(1, 10)][SerializeField] public int dificulty = 1;
     private int lastDif = 0;
     private List<GameObject> burbleList = new List<GameObject>();
     void Start()
@@ -26,8 +26,6 @@ public class Spawner : MonoBehaviour
 
     private IEnumerator SpawnBurble()
     {
-        yield return new WaitForSeconds(time);
-
         if (dificulty != lastDif)
         {
             ChangeDificult();
@@ -37,6 +35,7 @@ public class Spawner : MonoBehaviour
 
         GameObject newBurble = Instantiate(burbleList[burble], transform.position, Quaternion.identity);
         newBurble.transform.localScale = Vector3.one * 2;
+        yield return new WaitForSeconds(time);
         StartCoroutine(SpawnBurble());
     }
 

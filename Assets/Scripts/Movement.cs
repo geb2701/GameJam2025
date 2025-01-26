@@ -3,6 +3,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     private Rigidbody2D rb2D;
+    public Animator animator;
 
     [Header("Movimiento")]
     private float movimientoHorizontal = 0f;
@@ -45,6 +46,7 @@ public class Movement : MonoBehaviour
         var mover = movimientoHorizontal * Time.fixedDeltaTime;
         if (Physics2D.OverlapBox(detector.position, dimensionesCaja, 0f, pared))
         {
+            animator.SetBool("Jump", false);
             if (detectorLeft && mover < 0)
             {
                 mover = 0;
@@ -70,7 +72,14 @@ public class Movement : MonoBehaviour
         if (puedeSaltar && salto)
         {
             rb2D.AddForce(new Vector2(0f, fuerzaDeSalto));
+            animator.SetBool("Jump", true);
         }
+
+        if (rb2D.linearVelocity.y == 0)
+        {
+            animator.SetBool("Jump", false);
+        }
+
         puedeSaltar = false;
         salto = false;
     }
