@@ -4,5 +4,9 @@ En un mundo donde los gatos son bañados sin su consentimiento, lográ lo que ni
 
 ## Equipo/Team
 ### Arte/Art
--
+- Gustavo Bruno:
+  - Linkedin:
+  - Github:
+ 
+  
 
