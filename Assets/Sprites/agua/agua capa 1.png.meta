@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      agua capa 1_0: -2696087805351585661
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

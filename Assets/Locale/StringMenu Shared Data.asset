@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: StringMenu Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: StringMenu
+  m_TableCollectionNameGuidString: ca2d0aa7bae4f464eb59cf71d1b106be
+  m_Entries:
+  - m_Id: 154300968960
+    m_Key: keyJugar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 288980070400
+    m_Key: keyOpciones
+    m_Metadata:
+      m_Items: []
+  - m_Id: 328284893184
+    m_Key: keyIdiomas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 367912677376
+    m_Key: keyCreditos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 448216821760
+    m_Key: keyVolver
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1647070539776
+    m_Key: keyQuit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2577035816960
+    m_Key: keySonido
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3058697105408
+    m_Key: keySpanish
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3427070242816
+    m_Key: keyEnglish
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40997506379776
+    m_Key: keyMusic
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43628983349248
+    m_Key: keyMaster
+    m_Metadata:
+      m_Items: []
+  - m_Id: 87218702905344
+    m_Key: keyCreditosUade
+    m_Metadata:
+      m_Items: []
+  - m_Id: 87792236228608
+    m_Key: keyCredsTitle
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 8931619410196299804
+  references:
+    version: 2
+    RefIds:
+    - rid: 8931619410196299804
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1737834051562
