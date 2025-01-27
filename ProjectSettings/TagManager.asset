@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 3
   tags:
   - Killer
+  - Audio
+  - Skip
   layers:
   - Default
   - TransparentFX
