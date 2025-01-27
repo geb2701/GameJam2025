@@ -22,3 +22,6 @@ En un mundo donde los gatos son bañados sin su consentimiento, lográ lo que ni
 - Paulina Sergeichuk
   - Linkedin: https://www.linkedin.com/in/laura-paulina-sergeichuk-ab9573274/
   - Instagram de música: https://www.instagram.com/ignea.sound.design
+### Sonido
+- Agustín Suárez
+  - Linkedin: https://www.linkedin.com/in/agustin-suarez-18343b342/
