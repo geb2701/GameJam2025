@@ -7,8 +7,8 @@ En un mundo donde los gatos son bañados sin su consentimiento, lográ lo que ni
 
 ### Programación
 - Gustavo Bruno:
-  - Linkedin:
-  - Github:
+  - Linkedin: https://www.linkedin.com/in/gustavo-ezequiel-bruno-5197a218b/
+  - Github: https://github.com/geb2701
  
 - Matías Pedemonte:
   - Linkedin: https://www.linkedin.com/in/matias-pedemonte-261398268/
