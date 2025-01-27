@@ -65,7 +65,7 @@ public class animSceneControl : MonoBehaviour
                 }
                 break;
 
-            case 54:
+            case 56:
                 dialogueAnimator.SetTrigger("exit");
                 UnityEngine.SceneManagement.SceneManager.LoadScene(4);
 
