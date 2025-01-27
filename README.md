@@ -11,5 +11,8 @@ En un mundo donde los gatos son bañados sin su consentimiento, lográ lo que ni
 - Matías Pedemonte:
   - Linkedin: https://www.linkedin.com/in/matias-pedemonte-261398268/
   - Github: https://github.com/catafrulo
-  
-
+ 
+### Música
+- Paulina Sergeichuk
+  - Linkedin: https://www.linkedin.com/in/laura-paulina-sergeichuk-ab9573274/
+  - Instagram de música: https://www.instagram.com/ignea.sound.design
