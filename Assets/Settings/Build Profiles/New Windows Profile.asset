@@ -19,7 +19,17 @@ MonoBehaviour:
   m_PlatformBuildProfile:
     rid: 7436440820980384000
   m_OverrideGlobalSceneList: 1
-  m_Scenes: []
+  m_Scenes:
+  - m_enabled: 1
+    m_path: Assets/Scenes/Main_Menu_Scene.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Level_Scene.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Game_Over_Scene.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Intro_Scene.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Tutorial.unity
   m_ScriptingDefines: []
   m_PlayerSettingsYaml:
     m_Settings:
@@ -34,7 +44,7 @@ MonoBehaviour:
     - line: '|   targetDevice: 2'
     - line: '|   useOnDemandResources: 0'
     - line: '|   accelerometerFrequency: 60'
-    - line: '|   companyName: Escape from Gatina'
+    - line: '|   companyName: Gato Mugroso Studios'
     - line: '|   productName: Escape from Gatina'
     - line: '|   defaultCursor: {instanceID: 0}'
     - line: '|   cursorHotspot: {x: 0, y: 0}'
