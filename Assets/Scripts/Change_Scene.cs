@@ -5,6 +5,6 @@ public class Change_Scene : MonoBehaviour
 {
     public void ChangeToScene()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(4);
+        SceneManager.LoadScene(4);
     }
 }

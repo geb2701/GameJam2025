@@ -1,6 +1,6 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
 
 public class SFXVolumeControl : MonoBehaviour
 {
@@ -21,7 +21,7 @@ public class SFXVolumeControl : MonoBehaviour
     {
         if (!isPlaying)
         {
-            StartCoroutine(PlaySoundWithDelay(2f)); // Inicia la corrutina con un retraso de 2 segundos
+            StartCoroutine(PlaySoundWithDelay(0.2f)); // Inicia la corrutina con un retraso de 2 segundos
         }
     }
 
