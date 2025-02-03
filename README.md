@@ -13,7 +13,11 @@ En un mundo donde los gatos son bañados sin su consentimiento, lográ lo que ni
 - Matías Pedemonte:
   - Linkedin: https://www.linkedin.com/in/matias-pedemonte-261398268/
   - Github: https://github.com/catafrulo
-
+    
+- Lucas Sachetti:
+  - Linkedin: https://www.linkedin.com/in/lnsachetti/
+  - Github: https://github.com/LSachetti
+    
 - Juan Ignacio Santoro:
   - Linkedin: https://ar.linkedin.com/in/juan-ignacio-santoro-1478521b1/
   - Github: https://github.com/JuanIgnacioSantoro
